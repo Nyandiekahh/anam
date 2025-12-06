@@ -1,0 +1,378 @@
+/* Gallery Page Styles */
+
+.gallery-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.gallery-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1E5C8C 0%, #8E44AD 100%);
+}
+
+.gallery-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-camera-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.gallery-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.title-part {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gallery-hero .lead-text {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+}
+
+/* Redirect Section */
+.gallery-redirect-section {
+  padding: 5rem 0;
+}
+
+.redirect-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.redirect-card {
+  background: white;
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.redirect-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.google-icon {
+  font-size: 4rem;
+  color: #4285F4;
+  animation: bounce 2s infinite;
+}
+
+.images-icon {
+  font-size: 4rem;
+  color: var(--primary-green);
+  animation: bounce 2s infinite 0.2s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.redirect-card h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.redirect-description {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.gallery-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--light-bg);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(30, 92, 140, 0.05) 0%, rgba(45, 122, 62, 0.05) 100%);
+}
+
+.highlight-item svg {
+  font-size: 2rem;
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.highlight-item span {
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: left;
+}
+
+.redirect-buttons {
+  margin-bottom: 2rem;
+}
+
+.redirect-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  padding: 1.25rem 3rem;
+}
+
+.redirect-note {
+  color: var(--medium-gray);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--light-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-teal) 100%);
+  border-radius: 10px;
+}
+
+/* Categories Overview */
+.categories-overview {
+  padding: 5rem 0;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.category-overview-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-green);
+}
+
+.category-overview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.category-overview-card h4 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.category-overview-card p {
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* Info Section */
+.gallery-info-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, rgba(30, 92, 140, 0.05) 0%, rgba(142, 68, 173, 0.05) 100%);
+}
+
+.info-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.info-icon {
+  font-size: 4rem;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.info-content h3 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  margin-bottom: 0.75rem;
+}
+
+.contact-info strong {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero {
+    min-height: 40vh;
+  }
+
+  .gallery-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-hero .lead-text {
+    font-size: 1.1rem;
+  }
+
+  .redirect-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .redirect-card h2 {
+    font-size: 2rem;
+  }
+
+  .redirect-description {
+    font-size: 1.1rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gallery-highlights {
+    gap: 1rem;
+  }
+
+  .highlight-item {
+    padding: 1rem;
+  }
+
+  .redirect-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-redirect-section,
+  .categories-overview,
+  .gallery-info-section {
+    padding: 3rem 0;
+  }
+
+  .redirect-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .redirect-icon-wrapper {
+    gap: 1rem;
+  }
+
+  .google-icon,
+  .images-icon {
+    font-size: 3rem;
+  }
+
+  .redirect-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero-camera-icon {
+    font-size: 3rem;
+  }
+
+  .category-overview-card {
+    padding: 2rem;
+  }
+}

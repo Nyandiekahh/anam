@@ -1,0 +1,330 @@
+/* Peace Leadership Page Styles */
+
+.peaceleadership-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.peace-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00897B 0%, #2C5F2D 100%);
+  color: white;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.peace-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.peace-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+}
+
+.peace-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.peace-hero .lead-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.95;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Programs Section */
+.programs-section {
+  padding: 5rem 0;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-green);
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.program-card h3 {
+  font-size: 1.8rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.program-card .subtitle {
+  font-weight: 600;
+  color: var(--text-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.program-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.program-card ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--text-medium);
+  font-size: 1.05rem;
+}
+
+.program-card ul li:last-child {
+  border-bottom: none;
+}
+
+.program-card ul li strong {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.program-card ul li em {
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+/* Leadership Tracks Section */
+.leadership-tracks {
+  padding: 5rem 0;
+  background: var(--light-bg);
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.track-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 5px solid var(--secondary-blue);
+}
+
+.track-item h4 {
+  color: var(--secondary-blue);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.track-item p {
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+/* Quote Section */
+.quote-section {
+  background: linear-gradient(135deg, rgba(45, 122, 62, 0.05) 0%, rgba(22, 160, 133, 0.05) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  border-radius: 15px;
+}
+
+.quote-section blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.quote-section p {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.quote-section footer {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.impact-stat {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-bg);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.impact-stat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.impact-stat h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.impact-stat p {
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #2C5F2D 0%, #16A085 100%);
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section .lead-text {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .peace-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .peace-hero .lead-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .peace-hero {
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .peace-hero h1 {
+    font-size: 2rem;
+  }
+
+  .peace-hero .lead-text {
+    font-size: 1.1rem;
+  }
+
+  .program-card {
+    padding: 1.5rem;
+  }
+
+  .program-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .programs-section,
+  .leadership-tracks,
+  .impact-section,
+  .cta-section {
+    padding: 3rem 0;
+  }
+
+  .quote-section {
+    padding: 2rem 1rem;
+  }
+
+  .quote-section p {
+    font-size: 1.3rem;
+  }
+}

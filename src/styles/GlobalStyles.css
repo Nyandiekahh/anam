@@ -166,12 +166,17 @@ p {
   font-weight: 500;
 }
 
-.bold {
+/* Typography Utilities */
+.bold, strong {
   font-weight: 700;
 }
 
 .semibold {
   font-weight: 600;
+}
+
+.italic, em {
+  font-style: italic;
 }
 
 .underline {
@@ -180,9 +185,105 @@ p {
   text-underline-offset: 4px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .highlight {
   background: linear-gradient(180deg, transparent 60%, var(--accent-gold) 60%);
   padding: 0 4px;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Font Families */
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* Quote Styles */
+blockquote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  border-left: 4px solid var(--primary-green);
+  background: var(--off-white);
+  color: var(--dark-gray);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: var(--spacing-sm);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--medium-gray);
+}
+
+/* List Styles */
+ul, ol {
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+ul li, ol li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.7;
+}
+
+ul.styled-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.styled-list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+ul.styled-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: 700;
 }
 
 /* ==========================================
@@ -688,4 +789,85 @@ img {
   .no-print {
     display: none;
   }
+}
+
+/* ==========================================
+   SECTION HEADER FIXES FOR DARK BACKGROUNDS
+   ========================================== */
+
+/* Global Section Tag Styles */
+.section-tag {
+  color: var(--primary-green);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+/* Global Section Header Styles */
+.section-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+  color: var(--dark-navy);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-header .lead-text {
+  color: var(--medium-gray);
+}
+
+/* Override for sections with dark backgrounds */
+.partnerships-hero .section-tag,
+.peace-hero .section-tag,
+.sgbv-hero .section-tag,
+.economic-hero .section-tag,
+.cta-section .section-tag,
+.quote-section .section-tag,
+[class*="-hero"] .section-tag {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.partnerships-hero .section-header h2,
+.peace-hero .section-header h2,
+.sgbv-hero .section-header h2,
+.economic-hero .section-header h2,
+.cta-section .section-header h2,
+.quote-section .section-header h2,
+[class*="-hero"] .section-header h2,
+[class*="-hero"] h1,
+[class*="-hero"] h2 {
+  color: var(--pure-white) !important;
+}
+
+.partnerships-hero .lead-text,
+.peace-hero .lead-text,
+.sgbv-hero .lead-text,
+.economic-hero .lead-text,
+.cta-section .lead-text,
+.quote-section .lead-text,
+[class*="-hero"] .lead-text,
+[class*="-hero"] p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Specific fixes for sections with gradient backgrounds */
+section[style*="linear-gradient"] .section-tag,
+section[style*="linear-gradient"] h6 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+section[style*="linear-gradient"] h1,
+section[style*="linear-gradient"] h2,
+section[style*="linear-gradient"] h3,
+section[style*="linear-gradient"] h4 {
+  color: var(--pure-white) !important;
+}
+
+section[style*="linear-gradient"] p,
+section[style*="linear-gradient"] .lead-text {
+  color: rgba(255, 255, 255, 0.9) !important;
 }

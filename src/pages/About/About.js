@@ -12,7 +12,13 @@ import {
   FaGlobe,
   FaRocket,
   FaBalanceScale,
-  FaShieldAlt
+  FaShieldAlt,
+  FaCheckCircle,
+  FaAward,
+  FaHandHoldingHeart,
+  FaChalkboardTeacher,
+  FaSeedling,
+  FaNetworkWired
 } from 'react-icons/fa';
 import './About.css';
 

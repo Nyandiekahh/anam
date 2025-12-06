@@ -5,8 +5,8 @@ import {
   FaPhone,
   FaEnvelope,
   FaFacebook,
-  FaInstagram,
-  FaTwitter,
+  FaYoutube,
+  FaTiktok,
   FaLinkedin,
   FaWhatsapp,
   FaPaperPlane,
@@ -33,7 +33,16 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Format message for WhatsApp
+    const phoneNumber = '254729217016'; // +254 729 217016 without + and spaces
+    const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`;
+    
+    // Open WhatsApp with pre-filled message
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
     setFormStatus('success');
     setTimeout(() => {
       setFormData({ name: '', email: '', subject: '', message: '' });
@@ -51,23 +60,23 @@ const Contact = () => {
     {
       icon: <FaPhone />,
       title: 'Call Us',
-      details: ['+254 XXX XXX XXX', 'Mon-Fri: 8AM - 5PM EAT'],
+      details: ['+254 729 217016', 'Mon-Fri: 8AM - 5PM EAT'],
       color: '#16A085'
     },
     {
       icon: <FaEnvelope />,
       title: 'Email Us',
-      details: ['info@anamcbo.org', 'programs@anamcbo.org'],
+      details: ['finance@anamcbo.org', 'marketing@anamcbo.org', 'secretariat@anamcbo.org'],
       color: '#8E44AD'
     }
   ];
 
   const socialLinks = [
-    { icon: <FaFacebook />, url: '#', label: 'Facebook', color: '#1877F2' },
-    { icon: <FaInstagram />, url: '#', label: 'Instagram', color: '#E4405F' },
-    { icon: <FaTwitter />, url: '#', label: 'Twitter', color: '#1DA1F2' },
-    { icon: <FaLinkedin />, url: '#', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: <FaWhatsapp />, url: '#', label: 'WhatsApp', color: '#25D366' }
+    { icon: <FaFacebook />, url: 'https://www.facebook.com/people/ANAM-Community-Based-Organization-Turkana/61580072218437/', label: 'Facebook', color: '#1877F2' },
+    { icon: <FaTiktok />, url: 'https://www.tiktok.com/@anamcbokakuma', label: 'TikTok', color: '#000000' },
+    { icon: <FaYoutube />, url: 'https://www.youtube.com/@ANAMCBO_Turkana', label: 'YouTube', color: '#FF0000' },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/anam-c-b-o/', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: <FaWhatsapp />, url: 'https://wa.me/254729217016', label: 'WhatsApp', color: '#25D366' }
   ];
 
   return (

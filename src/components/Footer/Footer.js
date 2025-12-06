@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   FaFacebook,
-  FaTwitter,
-  FaInstagram,
+  FaTiktok,
   FaLinkedin,
   FaYoutube,
   FaWhatsapp,
@@ -38,12 +37,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaFacebook />, url: '#', label: 'Facebook', color: '#1877F2' },
-    { icon: <FaInstagram />, url: '#', label: 'Instagram', color: '#E4405F' },
-    { icon: <FaTwitter />, url: '#', label: 'Twitter', color: '#1DA1F2' },
-    { icon: <FaLinkedin />, url: '#', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: <FaYoutube />, url: '#', label: 'YouTube', color: '#FF0000' },
-    { icon: <FaWhatsapp />, url: '#', label: 'WhatsApp', color: '#25D366' }
+    { icon: <FaFacebook />, url: 'https://www.facebook.com/people/ANAM-Community-Based-Organization-Turkana/61580072218437/', label: 'Facebook', color: '#1877F2' },
+    { icon: <FaTiktok />, url: 'https://www.tiktok.com/@anamcbokakuma', label: 'TikTok', color: '#000000' },
+    { icon: <FaYoutube />, url: 'https://www.youtube.com/@ANAMCBO_Turkana', label: 'YouTube', color: '#FF0000' },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/anam-c-b-o/', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: <FaWhatsapp />, url: 'https://wa.me/254729217016', label: 'WhatsApp', color: '#25D366' }
   ];
 
   return (
@@ -151,14 +149,14 @@ const Footer = () => {
                   <FaPhone className="contact-icon" />
                   <div>
                     <strong>Phone:</strong>
-                    <p>+254 XXX XXX XXX</p>
+                    <p>+254 729 217016</p>
                   </div>
                 </li>
                 <li>
                   <FaEnvelope className="contact-icon" />
                   <div>
                     <strong>Email:</strong>
-                    <p>info@anamcbo.org</p>
+                    <p>finance@anamcbo.org</p>
                   </div>
                 </li>
               </ul>

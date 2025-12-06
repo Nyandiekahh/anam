@@ -352,9 +352,14 @@ const SkillsTraining = () => {
                       <FaGraduationCap /> {program.level}
                     </span>
                   </div>
-                  <button className="btn btn-outline btn-sm">
-                    Learn More
-                  </button>
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe-2buoAY-tFj6OmBXD6TxzxIdDChfqpRwAYkW21yiSwe87QA/viewform?usp=sharing&ouid=108921294445515076886"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary btn-sm"
+                  >
+                    Apply Now
+                  </a>
                 </motion.div>
               ))}
             </motion.div>
@@ -439,6 +444,56 @@ const SkillsTraining = () => {
         </div>
       </section>
 
+      {/* Payment Information Section */}
+      <section className="payment-section section">
+        <div className="container">
+          <motion.div
+            className="section-header text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h6 className="section-tag">Payment Information</h6>
+            <h2>How to <span className="highlight">Pay</span></h2>
+            <p className="lead-text">
+              Use the following payment details to complete your course registration
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="payment-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="payment-icon">
+              <FaCalculator />
+            </div>
+            <h3>Equity Bank Paybill</h3>
+            <div className="payment-details">
+              <div className="payment-item">
+                <span className="payment-label">Paybill Number:</span>
+                <span className="payment-value">247247</span>
+              </div>
+              <div className="payment-item">
+                <span className="payment-label">Account Number:</span>
+                <span className="payment-value">984100</span>
+              </div>
+              <div className="payment-item">
+                <span className="payment-label">Account Name:</span>
+                <span className="payment-value">Anam Community Based Organization</span>
+              </div>
+            </div>
+            <p className="payment-note">
+              <strong>Note:</strong> After payment, please submit the M-PESA confirmation message 
+              along with your application form.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="enrollment-cta section bg-primary">
         <div className="container">
@@ -455,9 +510,14 @@ const SkillsTraining = () => {
               through ANAM CBO training programs
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-white btn-lg">
-                Enroll Now
-              </Link>
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe-2buoAY-tFj6OmBXD6TxzxIdDChfqpRwAYkW21yiSwe87QA/viewform?usp=sharing&ouid=108921294445515076886"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-white btn-lg"
+              >
+                Apply Now
+              </a>
               <Link to="/about" className="btn btn-outline btn-lg">
                 Learn More
               </Link>

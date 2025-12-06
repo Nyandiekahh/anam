@@ -5,6 +5,17 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import SkillsTraining from './pages/SkillsTraining/SkillsTraining';
+import Fellowship from './pages/Fellowship/Fellowship';
+import CareerCoaching from './pages/CareerCoaching/CareerCoaching';
+import SocialMediaHub from './pages/SocialMediaHub/SocialMediaHub';
+import Health from './pages/Health/Health';
+import Tailoring from './pages/Tailoring/Tailoring';
+import PeaceLeadership from './pages/PeaceLeadership/PeaceLeadership';
+import SGBV from './pages/SGBV/SGBV';
+import EconomicEmpowerment from './pages/EconomicEmpowerment/EconomicEmpowerment';
+import Gallery from './pages/Gallery/Gallery';
+import Partnerships from './pages/Partnerships/Partnerships';
+import Contact from './pages/Contact/Contact';
 import './styles/GlobalStyles.css';
 import './App.css';
 
@@ -18,20 +29,17 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills-training" element={<SkillsTraining />} />
-            {/* Additional routes will be added as you create more pages */}
-            {/* 
             <Route path="/fellowship" element={<Fellowship />} />
             <Route path="/career-coaching" element={<CareerCoaching />} />
-            <Route path="/health-programs" element={<HealthPrograms />} />
+            <Route path="/social-media" element={<SocialMediaHub />} />
+            <Route path="/health-programs" element={<Health />} />
             <Route path="/tailoring" element={<Tailoring />} />
             <Route path="/peace-leadership" element={<PeaceLeadership />} />
-            <Route path="/sgbv-srhr" element={<SGBVSRHR />} />
+            <Route path="/sgbv-srhr" element={<SGBV />} />
             <Route path="/economic-empowerment" element={<EconomicEmpowerment />} />
-            <Route path="/social-media" element={<SocialMedia />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/partnerships" element={<Partnerships />} />
             <Route path="/contact" element={<Contact />} />
-            */}
           </Routes>
         </main>
         <Footer />

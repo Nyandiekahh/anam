@@ -1,0 +1,493 @@
+/* ==========================================
+   FELLOWSHIP PAGE STYLES
+   ========================================== */
+
+/* Hero Section */
+.fellowship-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--spacing-2xl) 0;
+}
+
+.fellowship-hero-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1E5C8C 0%, #8E44AD 100%);
+  z-index: 0;
+}
+
+.fellowship-hero-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(30, 92, 140, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(142, 68, 173, 0.3) 0%, transparent 50%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.fellowship-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.5);
+}
+
+.fellowship-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fellowship-hero-content h1 {
+  color: var(--pure-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.fellowship-hero-content .title-part {
+  display: block;
+  line-height: 1.1;
+}
+
+.fellowship-hero-content .lead-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  margin-bottom: var(--spacing-lg);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+.badge {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-white {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--pure-white);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* About Fellowship Section */
+.about-fellowship {
+  padding: var(--spacing-2xl) 0;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: var(--spacing-xl);
+}
+
+.content-block {
+  background: var(--pure-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.content-block h3 {
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-md);
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+}
+
+.content-block p {
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+.content-block.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Fellowship Tracks Section */
+.tracks-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.track-card {
+  background: var(--pure-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--track-gradient, var(--gradient-primary));
+}
+
+.track-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.track-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.track-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: var(--track-gradient, var(--gradient-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pure-white);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.track-title-group h3 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--dark-navy);
+  line-height: 1.3;
+}
+
+.track-subtitle {
+  font-size: 0.875rem;
+  color: var(--medium-gray);
+  margin-top: 0.25rem;
+}
+
+.track-description {
+  color: var(--dark-gray);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+}
+
+.track-details {
+  margin-top: auto;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--light-gray);
+}
+
+.detail-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-section li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.detail-section li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.benefit-card {
+  background: var(--pure-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.benefit-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pure-white);
+  font-size: 2rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.25rem;
+  color: var(--dark-navy);
+  margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card p {
+  color: var(--medium-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Process Timeline Section */
+.process-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.process-timeline {
+  max-width: 900px;
+  margin: var(--spacing-xl) auto 0;
+  position: relative;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: var(--light-gray);
+}
+
+.process-step {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: var(--pure-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+}
+
+.step-content {
+  flex: 1;
+  background: var(--pure-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.step-content h3 {
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.step-content p {
+  color: var(--dark-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.testimonial-card {
+  background: var(--pure-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 6rem;
+  color: var(--primary-green);
+  opacity: 0.1;
+  font-family: Georgia, serif;
+}
+
+.testimonial-text {
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+/* CTA Section */
+.cta-section.bg-primary {
+  background: var(--gradient-primary);
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--pure-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-content .lead-text {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-icon-large {
+  font-size: 4rem;
+  color: var(--pure-white);
+  margin-bottom: var(--spacing-md);
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fellowship-hero {
+    min-height: 50vh;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .track-card {
+    padding: var(--spacing-lg);
+  }
+
+  .track-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .track-icon {
+    margin: 0 auto;
+  }
+
+  .process-timeline::before {
+    left: 15px;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .process-step {
+    gap: var(--spacing-md);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}

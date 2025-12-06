@@ -1,0 +1,442 @@
+/* Economic Empowerment Page Styles */
+
+.economicempowerment-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.economic-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F9A825 0%, #FF6B35 100%);
+  color: white;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.economic-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.economic-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+}
+
+.economic-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.economic-hero .lead-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.95;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Programs Section */
+.programs-section {
+  padding: 5rem 0;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid #F9A825;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(249, 168, 37, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.program-card:hover::before {
+  opacity: 1;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(249, 168, 37, 0.25);
+}
+
+.program-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.program-card h3 {
+  font-size: 1.8rem;
+  color: #FF6B35;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.program-card .subtitle {
+  font-weight: 600;
+  color: var(--text-dark);
+  text-decoration: underline;
+  text-decoration-color: #F9A825;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  margin-bottom: 1.5rem;
+  display: block;
+  font-size: 1.05rem;
+}
+
+.program-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.program-card ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  color: var(--text-medium);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.program-card ul li:last-child {
+  border-bottom: none;
+}
+
+.program-card ul li strong {
+  color: #FF6B35;
+  font-weight: 600;
+}
+
+.program-card ul li em {
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.program-card blockquote {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(249, 168, 37, 0.08) 0%, rgba(255, 107, 53, 0.08) 100%);
+  border-radius: 8px;
+  border-left: 4px solid #F9A825;
+  font-style: italic;
+  color: var(--text-medium);
+  font-size: 1rem;
+}
+
+/* Impact Section */
+.impact-section {
+  background: linear-gradient(135deg, rgba(249, 168, 37, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+  padding: 5rem 0;
+  margin: 3rem 0;
+}
+
+.impact-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.impact-content h3 {
+  font-size: 2.2rem;
+  color: #FF6B35;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.impact-stat {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-bg);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.impact-stat:hover {
+  transform: scale(1.08);
+  border-color: #F9A825;
+  box-shadow: 0 8px 20px rgba(249, 168, 37, 0.2);
+}
+
+.impact-stat h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #FF6B35;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.impact-stat p {
+  font-size: 1.05rem;
+  color: var(--text-medium);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--light-bg);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(135deg, rgba(249, 168, 37, 0.08) 0%, rgba(255, 107, 53, 0.08) 100%);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  color: #FF6B35;
+  flex-shrink: 0;
+}
+
+.benefit-content h4 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-content p {
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* Quote Section */
+.quote-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #F9A825 0%, #FF6B35 100%);
+  color: white;
+  margin: 3rem 0;
+}
+
+.quote-section p {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 0;
+  text-align: center;
+  background: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cta-section .lead-text {
+  font-size: 1.3rem;
+  color: var(--text-medium);
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Success Stories */
+.success-stories {
+  padding: 5rem 0;
+  background: var(--light-bg);
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.story-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #F9A825;
+}
+
+.story-card h4 {
+  color: #FF6B35;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.story-card p {
+  color: var(--text-medium);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.story-card footer {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .economic-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .economic-hero .lead-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .economic-hero {
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .economic-hero h1 {
+    font-size: 2rem;
+  }
+
+  .economic-hero .lead-text {
+    font-size: 1.1rem;
+  }
+
+  .program-card {
+    padding: 2rem;
+  }
+
+  .program-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stat h2 {
+    font-size: 2.5rem;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .programs-section,
+  .impact-section,
+  .benefits-section,
+  .success-stories,
+  .cta-section {
+    padding: 3rem 0;
+  }
+
+  .impact-content,
+  .story-card,
+  .program-card {
+    padding: 1.5rem;
+  }
+
+  .quote-section p {
+    font-size: 1.4rem;
+  }
+}
