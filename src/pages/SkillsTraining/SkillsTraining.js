@@ -27,6 +27,7 @@ import {
   FaMobile,
   FaHandshake
 } from 'react-icons/fa';
+import SEO from '../../components/SEO/SEO';
 import './SkillsTraining.css';
 
 const SkillsTraining = () => {
@@ -253,6 +254,13 @@ const SkillsTraining = () => {
 
   return (
     <div className="skills-training-page">
+      <SEO 
+        title="Skills Training & Certification - Digital Skills, ICT, Entrepreneurship Programs"
+        description="Master digital skills, tech innovation, and entrepreneurship with ANAM CBO. Industry-recognized certifications, hands-on training, and career coaching. Paybill: 247247, Account: 0742566226. Join 5,000+ trained individuals."
+        keywords="skills training Kenya, digital skills Turkana, ICT training Kenya, vocational training Turkana West, entrepreneurship training Kenya, certification programs, tech training Kenya, project management training, donate to education Kenya"
+        canonicalUrl="/skills-training"
+      />
+      
       {/* Hero Section */}
       <section className="skills-hero">
         <div className="skills-hero-background">

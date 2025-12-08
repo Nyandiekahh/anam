@@ -20,6 +20,7 @@ import {
   FaSeedling,
   FaNetworkWired
 } from 'react-icons/fa';
+import SEO from '../../components/SEO/SEO';
 import './About.css';
 
 const About = () => {
@@ -71,32 +72,32 @@ const About = () => {
   const team = [
     {
       name: 'John Pyatich Biwot',
-      position: 'Director in charge of Communication',
-      bio: 'Leading strategic communications and community outreach initiatives to amplify ANAM CBO\'s impact.',
+      position: 'Communications & Advocacy Director',
+      bio: 'Global messaging, public engagement, policy influence – Leading strategic communications and community outreach initiatives to amplify ANAM CBO\'s impact.',
       image: '/John.jpeg'
     },
     {
       name: 'Peter Eyanae',
-      position: 'Assistant Communication Director',
-      bio: 'Supporting communication strategies and ensuring effective messaging across all platforms.',
+      position: 'Programs & Impact Director',
+      bio: 'Program design, monitoring, and evaluation – Supporting communication strategies and ensuring effective messaging across all platforms.',
       image: '/Peter Eyanae.jpeg'
     },
     {
       name: 'Evance Otieno Onyango',
-      position: 'ICT Director',
-      bio: 'Driving digital transformation and technology solutions for community empowerment programs.',
+      position: 'Technology & Innovation Director',
+      bio: 'ICT strategy, digital transformation, data systems – Driving digital transformation and technology solutions for community empowerment programs.',
       image: '/Evance Otieno Onyango.jpg'
     },
     {
       name: 'Mildred Mutuba',
-      position: 'Director in charge of Finance',
-      bio: 'Ensuring financial accountability and sustainable resource management for organizational growth.',
+      position: 'Finance & Operations Director',
+      bio: 'Budgeting, compliance, organizational efficiency – Ensuring financial accountability and sustainable resource management for organizational growth.',
       image: '/Mildred Mutuba.jpeg'
     },
     {
       name: 'Seth Kipsang',
-      position: 'Director in charge of Proposal Writing',
-      bio: 'Developing compelling proposals and securing funding partnerships to expand community programs.',
+      position: 'Strategy & Partnerships Director',
+      bio: 'Global collaborations, long-term planning, fundraising – Developing compelling proposals and securing funding partnerships to expand community programs.',
       image: '/Seth.jpeg'
     }
   ];
@@ -121,6 +122,13 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <SEO 
+        title="About Us - Our Mission, Vision & Leadership Team"
+        description="Learn about ANAM CBO's 10+ years of community empowerment in Turkana West, Kenya. Meet our leadership team including John Pyatich Biwot, Peter Eyanae, Evance Otieno, Mildred Mutuba, and Seth Kipsang driving transformative change."
+        keywords="ANAM CBO about, community organization Turkana West, CBO leadership Kenya, NGO mission vision, community empowerment team, Turkana West directors, Kenya CBO history"
+        canonicalUrl="/about"
+      />
+      
       {/* Hero Section */}
       <section className="about-hero">
         <div className="about-hero-background">

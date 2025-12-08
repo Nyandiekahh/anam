@@ -1,3 +1,24 @@
 # https://www.robotstxt.org/robotstxt.html
+# Allow all search engines to crawl the website
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow crawling of certain files
+Disallow: /static/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://anamcbo.org/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

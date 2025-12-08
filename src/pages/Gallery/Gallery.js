@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCamera, FaImages, FaVideo, FaHandHoldingHeart, FaPeace, FaSeedling, FaToilet, FaTimes } from 'react-icons/fa';
+import SEO from '../../components/SEO/SEO';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -125,6 +126,14 @@ const Gallery = () => {
 
   return (
     <div className="gallery-page">
+      <SEO 
+        title="Gallery - Photos & Videos from Our Community Programs"
+        description="Explore ANAM CBO's impact through photos and videos: GBV awareness campaigns, peace building initiatives, WASH programs, World Toilet Day events, and community empowerment projects in Turkana West, Kenya."
+        keywords="ANAM CBO gallery, community programs photos, Turkana West images, peace building Kenya, GBV awareness, WASH program Kenya, World Toilet Day, community empowerment photos, Kenya NGO gallery"
+        canonicalUrl="/gallery"
+        ogImage="/Peace Talk 1.jpeg"
+      />
+      
       {/* Hero Section */}
       <section className="gallery-hero">
         <div className="gallery-hero-background">
