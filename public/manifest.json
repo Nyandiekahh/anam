@@ -4,15 +4,16 @@
   "description": "Skills training, peace building, SGBV prevention, and economic empowerment programs",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "anam logo.jpeg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
       "src": "anam logo.jpeg",
       "type": "image/jpeg",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
