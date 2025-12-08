@@ -20,7 +20,6 @@ import {
   FaSeedling,
   FaNetworkWired
 } from 'react-icons/fa';
-import SEO from '../../components/SEO/SEO';
 import './About.css';
 
 const About = () => {
@@ -122,12 +121,6 @@ const About = () => {
 
   return (
     <div className="about-page">
-      <SEO 
-        title="About Us - Our Mission, Vision & Leadership Team"
-        description="Learn about ANAM CBO's 10+ years of community empowerment in Turkana West, Kenya. Meet our leadership team including John Pyatich Biwot, Peter Eyanae, Evance Otieno, Mildred Mutuba, and Seth Kipsang driving transformative change."
-        keywords="ANAM CBO about, community organization Turkana West, CBO leadership Kenya, NGO mission vision, community empowerment team, Turkana West directors, Kenya CBO history"
-        canonicalUrl="/about"
-      />
       
       {/* Hero Section */}
       <section className="about-hero">

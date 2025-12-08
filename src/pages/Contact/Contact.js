@@ -13,7 +13,6 @@ import {
   FaPaperPlane,
   FaCheckCircle
 } from 'react-icons/fa';
-import SEO from '../../components/SEO/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -84,12 +83,6 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <SEO 
-        title="Contact Us - Get in Touch with ANAM CBO | Donate & Partner"
-        description="Contact ANAM CBO in Turkana West, Kakuma. Phone: +254742566226, +254717346616. Email: anamcbo@gmail.com. Donate via M-Pesa Paybill 247247. Partner with us to empower communities in Kenya."
-        keywords="contact ANAM CBO, donate to ANAM CBO, Kenya NGO contact, Turkana West CBO contact, M-Pesa donation Kenya, partner with NGO Kenya, community organization contact"
-        canonicalUrl="/contact"
-      />
       
       {/* Hero Section */}
       <section className="contact-hero">

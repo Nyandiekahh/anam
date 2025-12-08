@@ -18,7 +18,6 @@ import {
   FaLightbulb,
   FaRocket
 } from 'react-icons/fa';
-import SEO from '../../components/SEO/SEO';
 import './Home.css';
 
 const Home = () => {
@@ -122,13 +121,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      <SEO 
-        title="Home - Empowering Communities in Turkana West, Kakuma Kenya"
-        description="ANAM CBO transforms lives in Turkana West through skills training, vocational education, peace building, SGBV prevention, and economic empowerment. Join 5,000+ community members building sustainable futures."
-        keywords="ANAM CBO, Turkana West CBO, Kakuma community organization, skills training Kenya, vocational training Turkana, community empowerment Kenya, NGO Turkana West, CBO Kenya programs, youth empowerment Kenya, peace building Turkana"
-        canonicalUrl="/"
-      />
-      
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-background">
