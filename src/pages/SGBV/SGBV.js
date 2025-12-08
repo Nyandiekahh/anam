@@ -129,6 +129,41 @@ const SGBV = () => {
         </div>
       </section>
 
+      {/* Community Impact Section */}
+      <section className="impact-showcase section">
+        <div className="container">
+          <motion.div
+            className="section-header text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2>Our Community Impact</h2>
+            <p className="lead-text">
+              <em>Raising awareness and <strong>creating safe spaces</strong> in communities</em>
+            </p>
+          </motion.div>
+          <motion.div
+            className="impact-image-container"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <img 
+              src="/GBV awareness at Natiir village 2.jpeg" 
+              alt="GBV Awareness Session at Natiir Village" 
+              className="impact-image"
+            />
+            <div className="image-caption">
+              <h4>GBV Awareness at Natiir Village</h4>
+              <p>Community members engaging in dialogue about gender-based violence prevention and support</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Dialogues Section */}
       <section className="dialogues-section">
         <div className="container">

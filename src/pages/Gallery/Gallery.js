@@ -1,24 +1,131 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCamera, FaExternalLinkAlt, FaGoogle, FaImages, FaArrowRight, FaGraduationCap, FaUsers, FaHeart, FaHandshake } from 'react-icons/fa';
+import { FaCamera, FaImages, FaVideo, FaHandHoldingHeart, FaPeace, FaSeedling, FaToilet, FaTimes } from 'react-icons/fa';
 import './Gallery.css';
 
 const Gallery = () => {
-  const GOOGLE_DRIVE_URL = 'https://drive.google.com/drive/folders/1OyA5_EXcy8YZ2gbfvdJ-_fsu8ZzMHwzx?usp=sharing';
+  const [selectedMedia, setSelectedMedia] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      window.location.href = GOOGLE_DRIVE_URL;
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
+  const galleryItems = [
+    {
+      id: 1,
+      title: 'GBV Awareness at Natiir Village',
+      image: '/GBV awareness at Natiir village 2.jpeg',
+      category: 'community',
+      description: 'Gender-Based Violence awareness campaign at Natiir village, empowering communities through education.'
+    },
+    {
+      id: 2,
+      title: 'Peace Building with LWF',
+      image: '/In partnership with Lwf for Peace building engagement.jpeg',
+      category: 'peace',
+      description: 'Partnership with Lutheran World Federation for peace building engagement in the community.'
+    },
+    {
+      id: 3,
+      title: 'Peace Talk Session 1',
+      image: '/Peace Talk 1.jpeg',
+      category: 'peace',
+      description: 'Community peace dialogue session promoting conflict resolution and harmony.'
+    },
+    {
+      id: 4,
+      title: 'Peace Talk Session 2',
+      image: '/Peace TALK 2.jpeg',
+      category: 'peace',
+      description: 'Engaging community leaders in peace building conversations.'
+    },
+    {
+      id: 5,
+      title: 'Peace Talk Session 3',
+      image: '/Peace Talk 3.jpeg',
+      category: 'peace',
+      description: 'Community members participating in peace dialogue initiatives.'
+    },
+    {
+      id: 6,
+      title: 'Peace Talk Video',
+      video: '/Peace Talk video.mp4',
+      category: 'peace',
+      description: 'Documentary footage of our peace building initiatives in action.'
+    },
+    {
+      id: 7,
+      title: 'World Toilet Day Showcase',
+      image: '/Showcasing their products  at Kalobeyeyi during Word\'s toilet day.jpeg',
+      category: 'wash',
+      description: 'Showcasing sanitation products at Kalobeyeyi during World Toilet Day celebration.'
+    },
+    {
+      id: 8,
+      title: 'World Toilet Day Exhibition',
+      image: '/Showcasing their products  at Kalobeyeyi during Word\'s toilet day 2.jpeg',
+      category: 'wash',
+      description: 'Community members demonstrating WASH products during World Toilet Day.'
+    },
+    {
+      id: 9,
+      title: 'Poultry Project Discussion',
+      image: '/Poultry project talk.jpeg',
+      category: 'empowerment',
+      description: 'Training session on sustainable poultry farming for economic empowerment.'
+    },
+    {
+      id: 10,
+      title: 'WASH Products 1',
+      image: '/Products produced at Anam CBo to aid in WASH programme 1.jpeg',
+      category: 'wash',
+      description: 'Locally produced sanitation products supporting our WASH program.'
+    },
+    {
+      id: 11,
+      title: 'WASH Products 2',
+      image: '/Products produced at Anam CBo to aid in WASH programme 2.jpeg',
+      category: 'wash',
+      description: 'Community-made hygiene products promoting health and sanitation.'
+    },
+    {
+      id: 12,
+      title: 'WASH Products 3',
+      image: '/Products produced at Anam CBo to aid in WASH programme 3.jpeg',
+      category: 'wash',
+      description: 'Innovative sanitation solutions produced at ANAM CBO.'
+    },
+    {
+      id: 13,
+      title: 'WASH Products 4',
+      image: '/Products produced at Anam CBo to aid in WASH programme 4.jpeg',
+      category: 'wash',
+      description: 'Sustainable WASH products created by community members.'
+    }
+  ];
 
-  const handleViewGallery = () => {
-    window.open(GOOGLE_DRIVE_URL, '_blank');
+  const categories = [
+    { id: 'all', name: 'All Media', icon: <FaImages /> },
+    { id: 'peace', name: 'Peace Building', icon: <FaPeace /> },
+    { id: 'wash', name: 'WASH Program', icon: <FaToilet /> },
+    { id: 'community', name: 'Community', icon: <FaHandHoldingHeart /> },
+    { id: 'empowerment', name: 'Empowerment', icon: <FaSeedling /> }
+  ];
+
+  const filteredItems = activeCategory === 'all' 
+    ? galleryItems 
+    : galleryItems.filter(item => item.category === activeCategory);
+
+  const openMedia = (item) => {
+    setSelectedMedia(item);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMedia = () => {
+    setSelectedMedia(null);
+    document.body.style.overflow = 'auto';
   };
 
   return (
     <div className="gallery-page">
+      {/* Hero Section */}
       <section className="gallery-hero">
         <div className="gallery-hero-background">
           <div className="gallery-hero-overlay"></div>
@@ -32,136 +139,133 @@ const Gallery = () => {
           >
             <FaCamera className="hero-camera-icon" />
             <h1>
-              <span className="title-part">Photo</span>
-              <span className="title-part gradient-text"> Gallery</span>
+              <span className="title-part">Our</span>
+              <span className="title-part"> Gallery</span>
             </h1>
             <p className="lead-text">
-              <em>Capturing <strong>moments of transformation</strong>, celebrating success, and sharing the stories behind the impact</em>
+              <em>Capturing <strong>moments of transformation</strong>, celebrating impact, and sharing stories of community empowerment</em>
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="gallery-redirect-section section">
+      {/* Category Filter */}
+      <section className="category-filter section">
         <div className="container">
           <motion.div
-            className="redirect-content"
+            className="filter-tabs"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="redirect-card">
-              <div className="redirect-icon-wrapper">
-                <FaGoogle className="google-icon" />
-                <FaImages className="images-icon" />
-              </div>
-              <h2>View Our Complete <span className="highlight">Photo Gallery</span></h2>
-              <p className="redirect-description">
-                Our photo gallery is hosted on <strong>Google Drive</strong> where you can view hundreds of photos from our programs, events, training sessions, and community activities.
-              </p>
-              <div className="gallery-highlights">
-                <div className="highlight-item">
-                  <FaCamera />
-                  <span>Training & Workshop Sessions</span>
-                </div>
-                <div className="highlight-item">
-                  <FaImages />
-                  <span>Graduation Ceremonies</span>
-                </div>
-                <div className="highlight-item">
-                  <FaCamera />
-                  <span>Community Events</span>
-                </div>
-                <div className="highlight-item">
-                  <FaImages />
-                  <span>Success Stories & More</span>
-                </div>
-              </div>
-              <div className="redirect-buttons">
-                <button className="btn btn-primary btn-lg" onClick={handleViewGallery}>
-                  <FaExternalLinkAlt />
-                  View Gallery on Google Drive
-                  <FaArrowRight />
-                </button>
-              </div>
-              <p className="redirect-note">
-                <em>You will be redirected automatically in 5 seconds, or click the button above</em>
-              </p>
-              <div className="loading-bar">
-                <motion.div
-                  className="loading-progress"
-                  initial={{ width: 0 }}
-                  animate={{ width: '100%' }}
-                  transition={{ duration: 5, ease: 'linear' }}
-                />
-              </div>
-            </div>
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                className={`filter-tab ${activeCategory === category.id ? 'active' : ''}`}
+                onClick={() => setActiveCategory(category.id)}
+              >
+                {category.icon}
+                <span>{category.name}</span>
+              </button>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      <section className="categories-overview section bg-light">
+      {/* Gallery Grid */}
+      <section className="gallery-grid-section section">
         <div className="container">
-          <motion.div
-            className="section-header text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h6 className="section-tag">What You'll Find</h6>
-            <h2>Our <em>Visual Story</em></h2>
-            <p className="lead-text">
-              Browse through our collection of <strong>memorable moments</strong> and <em>inspiring stories</em>
-            </p>
-          </motion.div>
-          <div className="categories-grid">
-            {[
-              { icon: <FaGraduationCap />, title: 'Training Sessions', desc: 'Participants learning digital skills, entrepreneurship, and more' },
-              { icon: <FaGraduationCap />, title: 'Graduation Ceremonies', desc: 'Celebrating achievements and success stories' },
-              { icon: <FaUsers />, title: 'Community Events', desc: 'Outreach programs and community engagement' },
-              { icon: <FaHeart />, title: 'Success Stories', desc: 'Alumni thriving in their careers and businesses' },
-              { icon: <FaHandshake />, title: 'Partnership Moments', desc: 'Collaboration with partners and stakeholders' },
-              { icon: <FaHeart />, title: 'Special Events', desc: 'Celebrations, milestones, and memorable occasions' }
-            ].map((cat, index) => (
+          <div className="gallery-grid">
+            {filteredItems.map((item, index) => (
               <motion.div
-                key={index}
-                className="category-overview-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
+                key={item.id}
+                className="gallery-item"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.05, duration: 0.4 }}
                 viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                onClick={() => openMedia(item)}
               >
-                <div className="category-icon">{cat.icon}</div>
-                <h4>{cat.title}</h4>
-                <p>{cat.desc}</p>
+                {item.video ? (
+                  <div className="gallery-video-thumb">
+                    <video src={item.video} />
+                    <div className="video-overlay">
+                      <FaVideo />
+                    </div>
+                  </div>
+                ) : (
+                  <img src={item.image} alt={item.title} className="gallery-image" />
+                )}
+                <div className="gallery-item-overlay">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="gallery-info-section section">
+      {/* More Photos Section */}
+      <section className="more-photos-section section">
         <div className="container">
           <motion.div
-            className="info-content text-center"
+            className="more-photos-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <FaCamera className="info-icon" />
-            <h3>Share Your <span className="highlight">Moments</span> With Us</h3>
+            <FaImages className="drive-icon" />
+            <h2>View More Photos</h2>
             <p className="lead-text">
-              <em>Have photos from ANAM CBO events or programs? We'd love to feature them!</em>
+              <em>Explore our complete photo collection with <strong>hundreds more images</strong> from programs, events, and community activities</em>
             </p>
-            <div className="contact-info">
-              <p><strong>Email your photos to:</strong> marketing@anamcbo.org</p>
-              <p><strong>Include:</strong> Your name, program, date, and a brief description</p>
-            </div>
+            <p className="drive-description">
+              Our full photo gallery is hosted on Google Drive, featuring extensive documentation of our training sessions, graduation ceremonies, community outreach, success stories, and special events.
+            </p>
+            <a 
+              href="https://drive.google.com/drive/folders/1OyA5_EXcy8YZ2gbfvdJ-_fsu8ZzMHwzx?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-lg"
+            >
+              <FaImages />
+              Open Google Drive Gallery
+            </a>
           </motion.div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {selectedMedia && (
+        <motion.div
+          className="lightbox-modal"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={closeMedia}
+        >
+          <button className="close-button" onClick={closeMedia}>
+            <FaTimes />
+          </button>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            {selectedMedia.video ? (
+              <video controls autoPlay className="lightbox-video">
+                <source src={selectedMedia.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img src={selectedMedia.image} alt={selectedMedia.title} className="lightbox-image" />
+            )}
+            <div className="lightbox-info">
+              <h3>{selectedMedia.title}</h3>
+              <p>{selectedMedia.description}</p>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };

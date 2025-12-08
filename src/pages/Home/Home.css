@@ -8,13 +8,13 @@
   justify-content: center;
   overflow: hidden;
   padding-top: 80px;
-  background: #FFFFFF;
+  background: transparent;
 }
 
 .hero-background {
   position: absolute;
   inset: 0;
-  background: #FFFFFF;
+  background: transparent;
   z-index: 0;
 }
 
@@ -153,7 +153,7 @@
 /* ABOUT PREVIEW SECTION */
 
 .about-preview {
-  background: #FFFFFF;
+  background: transparent;
   padding: 100px 0;
 }
 
@@ -171,7 +171,7 @@
 .image-placeholder {
   width: 100%;
   aspect-ratio: 4/3;
-  background: #FFFFFF;
+  background: transparent;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -189,11 +189,13 @@
   position: absolute;
   bottom: -20px;
   right: -20px;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   padding: 25px 30px;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .badge-number {
@@ -292,7 +294,7 @@
 }
 
 .bg-light {
-  background: #FFFFFF;
+  background: transparent;
 }
 
 .section-header {
@@ -311,7 +313,7 @@
 }
 
 .program-card {
-  background: #FFFFFF;
+  background: transparent;
   border-radius: 20px;
   padding: 35px 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -337,6 +339,7 @@
 .program-card:hover {
   border-color: #000000;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .program-card:hover::before {
@@ -392,19 +395,20 @@
   position: relative;
   overflow: hidden;
   padding: 100px 0;
+  background: transparent;
 }
 
 .impact-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1E5C8C 0%, #2D7A3E 100%);
+  background: transparent;
   z-index: 0;
 }
 
 .impact-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: transparent;
   z-index: 1;
 }
 
@@ -438,7 +442,7 @@
 }
 
 .stat-card {
-  background: #FFFFFF;
+  background: transparent;
   backdrop-filter: none;
   border: 2px solid #000000;
   border-radius: 20px;
@@ -448,7 +452,7 @@
 }
 
 .stat-card:hover {
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
   border-color: #000000;
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -479,7 +483,7 @@
 .success-quote {
   max-width: 900px;
   margin: 0 auto;
-  background: #FFFFFF;
+  background: transparent;
   backdrop-filter: none;
   border: 2px solid #000000;
   border-radius: 20px;
@@ -515,7 +519,7 @@
 
 .cta-section {
   padding: 100px 0;
-  background: #FFFFFF;
+  background: transparent;
 }
 
 .cta-grid {
@@ -525,7 +529,7 @@
 }
 
 .cta-card {
-  background: #FFFFFF;
+  background: transparent;
   border-radius: 20px;
   padding: 45px 35px;
   text-align: center;
@@ -538,6 +542,7 @@
   border-color: #000000;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .cta-icon {

@@ -81,11 +81,18 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="logo-text">
-              <span className="logo-anam">ANAM</span>
-              <span className="logo-cbo">CBO</span>
-            </span>
-            <span className="logo-tagline">Empowering Communities</span>
+            <img 
+              src="/anam logo.jpeg" 
+              alt="ANAM CBO Logo" 
+              className="logo-image"
+            />
+            <div className="logo-text">
+              <div>
+                <span className="logo-anam">ANAM</span>
+                <span className="logo-cbo"> CBO</span>
+              </div>
+              <span className="logo-tagline">Empowering Communities</span>
+            </div>
           </motion.div>
         </Link>
 

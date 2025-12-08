@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   FaMapMarkerAlt,
@@ -15,6 +16,7 @@ import {
 import './Contact.css';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -274,7 +276,10 @@ const Contact = () => {
               Your contribution helps us <strong>empower more communities</strong> and create 
               lasting impact through education and skills development
             </p>
-            <button className="btn btn-primary btn-lg">
+            <button 
+              className="btn btn-primary btn-lg"
+              onClick={() => navigate('/skills-training')}
+            >
               Make a Donation
             </button>
           </motion.div>

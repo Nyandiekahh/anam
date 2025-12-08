@@ -70,28 +70,34 @@ const About = () => {
 
   const team = [
     {
-      name: 'John Doe',
-      position: 'Executive Director',
-      bio: 'Passionate community leader with 15+ years of experience in grassroots development and capacity building.',
-      image: null
+      name: 'John Pyatich Biwot',
+      position: 'Director in charge of Communication',
+      bio: 'Leading strategic communications and community outreach initiatives to amplify ANAM CBO\'s impact.',
+      image: '/John.jpeg'
     },
     {
-      name: 'Jane Smith',
-      position: 'Programs Director',
-      bio: 'Expert in curriculum development and skills training with a focus on digital literacy and entrepreneurship.',
-      image: null
+      name: 'Peter Eyanae',
+      position: 'Assistant Communication Director',
+      bio: 'Supporting communication strategies and ensuring effective messaging across all platforms.',
+      image: '/Peter Eyanae.jpeg'
     },
     {
-      name: 'David Okoth',
-      position: 'Community Engagement Lead',
-      bio: 'Dedicated to building strong community relationships and ensuring inclusive participation in all programs.',
-      image: null
+      name: 'Evance Otieno Onyango',
+      position: 'ICT Director',
+      bio: 'Driving digital transformation and technology solutions for community empowerment programs.',
+      image: '/Evance Otieno Onyango.jpg'
     },
     {
-      name: 'Sarah Akinyi',
-      position: 'M&E Coordinator',
-      bio: 'Data-driven professional ensuring program effectiveness through robust monitoring and evaluation frameworks.',
-      image: null
+      name: 'Mildred Mutuba',
+      position: 'Director in charge of Finance',
+      bio: 'Ensuring financial accountability and sustainable resource management for organizational growth.',
+      image: '/Mildred Mutuba.jpeg'
+    },
+    {
+      name: 'Seth Kipsang',
+      position: 'Director in charge of Proposal Writing',
+      bio: 'Developing compelling proposals and securing funding partnerships to expand community programs.',
+      image: '/Seth.jpeg'
     }
   ];
 
@@ -375,9 +381,13 @@ const About = () => {
                 whileHover={{ y: -10 }}
               >
                 <div className="team-image">
-                  <div className="team-placeholder">
-                    <FaUsers />
-                  </div>
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} />
+                  ) : (
+                    <div className="team-placeholder">
+                      <FaUsers />
+                    </div>
+                  )}
                 </div>
                 <div className="team-info">
                   <h3>{member.name}</h3>

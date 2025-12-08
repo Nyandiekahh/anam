@@ -92,9 +92,33 @@ html {
 body {
   font-family: var(--font-primary);
   color: var(--dark-gray);
-  background-color: var(--pure-white);
+  background-color: #FAFAFA;
   line-height: 1.7;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* ==========================================
+   WATERMARK EFFECT
+   ========================================== */
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 600px;
+  height: 80vh;
+  max-height: 600px;
+  background-image: url('../../public/anam%20logo.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* ==========================================
@@ -216,10 +240,11 @@ p {
 }
 
 .gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #000000;
+  background-clip: unset;
+  color: #000000;
 }
 
 /* Font Families */
@@ -416,13 +441,15 @@ ul.styled-list li::before {
    ========================================== */
 
 .card {
-  background: var(--pure-white);
+  background: transparent;
+  backdrop-filter: none;
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .card::before {
@@ -440,6 +467,8 @@ ul.styled-list li::before {
 .card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .card:hover::before {
@@ -681,15 +710,15 @@ img {
 }
 
 .bg-white {
-  background: var(--pure-white);
+  background: transparent;
 }
 
 .bg-light {
-  background: var(--off-white);
+  background: transparent;
 }
 
 .bg-dark {
-  background: var(--dark-navy);
+  background: rgba(26, 26, 46, 0.9);
 }
 
 .mb-0 { margin-bottom: 0; }
@@ -748,6 +777,12 @@ img {
   .btn {
     width: 100%;
   }
+
+  body::before {
+    width: 85vw;
+    height: 75vh;
+    opacity: 0.07;
+  }
 }
 
 @media (max-width: 480px) {
@@ -757,6 +792,12 @@ img {
   
   .card {
     padding: var(--spacing-md);
+  }
+
+  body::before {
+    width: 90vw;
+    height: 70vh;
+    opacity: 0.06;
   }
 }
 
